@@ -38,7 +38,7 @@ pipeline {
           steps {
             script {
               unstash 'build-test-artifacts'
-              def server = Artifactory.server 'Artifactory'
+              def server = Artifactory.server 'ArtifactoryDocker'
               def uploadSpec = """{
                 "files": [
                   {
